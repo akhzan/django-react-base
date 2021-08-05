@@ -66,6 +66,9 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --quiet --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
     ]
   }
 }
