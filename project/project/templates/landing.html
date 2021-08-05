@@ -1,0 +1,23 @@
+{% load static %} {% load manifest %} {% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title data-react-helmet="true">{% block title %}Pinjaman Jaminan BPKB{% endblock %}</title>
+    <link async rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css" />
+    {% manifest_match 'entrypoint-css' '
+    <link async rel="stylesheet" href="{match}" />
+    ' %}
+  </head>
+
+  <body>
+    <div id="root"></div>
+    {% csrf_token %} {% manifest_match 'entrypoint-js' '
+    <script src="{match}"></script>
+    ' %} {% comment %}
+    <script type="text/javascript" src="{% manifest 'main.js' %}"></script>
+    {% endcomment %} {% comment %} {% render_bundle 'main' %} {% endcomment %}
+  </body>
+</html>

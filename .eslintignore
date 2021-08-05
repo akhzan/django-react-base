@@ -1,0 +1,7 @@
+project/node_modules
+project/dist
+project/build
+project/src/setupTests.ts
+project/src/reportWebVitals.ts
+project/src/react-app-env.d.ts
+**/serviceworker.js
