@@ -1,15 +1,20 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { URL } from '../constants'
+import Login from 'login'
+import InjectionList from 'injection/list'
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
         <Route exact path={URL.HOME}>
-          <div>Home</div>
+          <InjectionList />
+        </Route>
+        <Route exact path={URL.INJECTION_DETAIL}>
+          <InjectionList />
         </Route>
         <Route exact path={URL.LOGIN}>
-          <div>Login</div>
+          <Login />
         </Route>
       </Switch>
     </Router>

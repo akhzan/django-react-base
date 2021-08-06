@@ -1,0 +1,43 @@
+@import './variables/units';
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 !important;
+  .column {
+    padding: 0 !important;
+  }
+}
+
+.login-content {
+  padding: $paddingDefault;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content__segment {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px !important;
+}
+
+.login-content__forgot {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.login-banner {
+  background: #4c2a86;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 3em;
+  align-items: center;
+  font-size: 48px;
+  color: white;
+  p {
+    margin-bottom: 0;
+  }
+}

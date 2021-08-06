@@ -19,4 +19,5 @@ from . import views
 urlpatterns = [
     path('', views.landing),
     path('login', views.landing),
+    path('injection/<slug:slug>', views.landing),
 ]

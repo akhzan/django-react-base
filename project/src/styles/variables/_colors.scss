@@ -1,0 +1,523 @@
+@import './var';
+
+//SEASALT
+.seasalt--darkest {
+  background-color: $seasalt-darkest !important;
+  border-color: $seasalt-darkest !important;
+}
+.seasalt--darkest--text {
+  color: $seasalt-darkest !important;
+  caret-color: $seasalt-darkest !important;
+}
+
+.seasalt--darker {
+  background-color: $seasalt-darker !important;
+  border-color: $seasalt-darker !important;
+}
+.seasalt--darker--text {
+  color: $seasalt-darker !important;
+  caret-color: $seasalt-darker !important;
+}
+
+.seasalt--dark {
+  background-color: $seasalt-dark !important;
+  border-color: $seasalt-dark !important;
+}
+.seasalt--dark--text {
+  color: $seasalt-dark !important;
+  caret-color: $seasalt-dark !important;
+}
+
+.seasalt {
+  background-color: $seasalt !important;
+  border-color: $seasalt !important;
+}
+.seasalt--text {
+  color: $seasalt !important;
+  caret-color: $seasalt !important;
+}
+
+.seasalt--light {
+  background-color: $seasalt-light !important;
+  border-color: $seasalt-light !important;
+}
+.seasalt--light--text {
+  color: $seasalt-light !important;
+  caret-color: $seasalt-light !important;
+}
+
+.seasalt--lighter {
+  background-color: $seasalt-lighter !important;
+  border-color: $seasalt-lighter !important;
+}
+.seasalt--lighter--text {
+  color: $seasalt-lighter !important;
+  caret-color: $seasalt-lighter !important;
+}
+
+.seasalt--lightest {
+  background-color: $seasalt-lightest !important;
+  border-color: $seasalt-lightest !important;
+}
+.seasalt--lightest--text {
+  color: $seasalt-lightest !important;
+  caret-color: $seasalt-lightest !important;
+}
+
+//TARO
+.taro--darkest {
+  background-color: $taro-darkest !important;
+  border-color: $taro-darkest !important;
+}
+.taro--darkest--text {
+  color: $taro-darkest !important;
+  caret-color: $taro-darkest !important;
+}
+
+.taro--darker {
+  background-color: $taro-darker !important;
+  border-color: $taro-darker !important;
+}
+.taro--darker--text {
+  color: $taro-darker !important;
+  caret-color: $taro-darker !important;
+}
+
+.taro--dark {
+  background-color: $taro-dark !important;
+  border-color: $taro-dark !important;
+}
+.taro--dark--text {
+  color: $taro-dark !important;
+  caret-color: $taro-dark !important;
+}
+
+.taro {
+  background-color: $taro !important;
+  border-color: $taro !important;
+}
+.taro--text {
+  color: $taro !important;
+  caret-color: $taro !important;
+}
+
+.taro--light {
+  background-color: $taro-light !important;
+  border-color: $taro-light !important;
+}
+.taro--light--text {
+  color: $taro-light !important;
+  caret-color: $taro-light !important;
+}
+
+.taro--lighter {
+  background-color: $taro-lighter !important;
+  border-color: $taro-lighter !important;
+}
+.taro--lighter--text {
+  color: $taro-lighter !important;
+  caret-color: $taro-lighter !important;
+}
+
+.taro--lightest {
+  background-color: $taro-lightest !important;
+  border-color: $taro-lightest !important;
+}
+.taro--lightest--text {
+  color: $taro-lightest !important;
+  caret-color: $taro-lightest !important;
+}
+
+//BLACK
+.black {
+  background-color: $black !important;
+  border-color: $black !important;
+}
+.black--text {
+  color: $black !important;
+  caret-color: $black !important;
+}
+
+//CHILI
+.chili--darkest {
+  background-color: $chili-darkest !important;
+  border-color: $chili-darkest !important;
+}
+.chili--darkest--text {
+  color: $chili-darkest !important;
+  caret-color: $chili-darkest !important;
+}
+
+.chili--darker {
+  background-color: $chili-darker !important;
+  border-color: $chili-darker !important;
+}
+.chili--darker--text {
+  color: $chili-darker !important;
+  caret-color: $chili-darker !important;
+}
+
+.chili--dark {
+  background-color: $chili-dark !important;
+  border-color: $chili-dark !important;
+}
+.chili--dark--text {
+  color: $chili-dark !important;
+  caret-color: $chili-dark !important;
+}
+
+.chili {
+  background-color: $chili !important;
+  border-color: $chili !important;
+}
+.chili--text {
+  color: $chili !important;
+  caret-color: $chili !important;
+}
+
+.chili--light {
+  background-color: $chili-light !important;
+  border-color: $chili-light !important;
+}
+.chili--light--text {
+  color: $chili-light !important;
+  caret-color: $chili-light !important;
+}
+
+.chili--lighter {
+  background-color: $chili-lighter !important;
+  border-color: $chili-lighter !important;
+}
+.chili--lighter--text {
+  color: $chili-lighter !important;
+  caret-color: $chili-lighter !important;
+}
+
+.chili--lightest {
+  background-color: $chili-lightest !important;
+  border-color: $chili-lightest !important;
+}
+.chili--lightest--text {
+  color: $chili-lightest !important;
+  caret-color: $chili-lightest !important;
+}
+
+//PANDAN
+.pandan--darkest {
+  background-color: $pandan-darkest !important;
+  border-color: $pandan-darkest !important;
+}
+.pandan--darkest--text {
+  color: $pandan-darkest !important;
+  caret-color: $pandan-darkest !important;
+}
+
+.pandan--darker {
+  background-color: $pandan-darker !important;
+  border-color: $pandan-darker !important;
+}
+.pandan--darker--text {
+  color: $pandan-darker !important;
+  caret-color: $pandan-darker !important;
+}
+
+.pandan--dark {
+  background-color: $pandan-dark !important;
+  border-color: $pandan-dark !important;
+}
+.pandan--dark--text {
+  color: $pandan-dark !important;
+  caret-color: $pandan-dark !important;
+}
+
+.pandan {
+  background-color: $pandan !important;
+  border-color: $pandan !important;
+}
+.pandan--text {
+  color: $pandan !important;
+  caret-color: $pandan !important;
+}
+
+.pandan--light {
+  background-color: $pandan-light !important;
+  border-color: $pandan-light !important;
+}
+.pandan--light--text {
+  color: $pandan-light !important;
+  caret-color: $pandan-light !important;
+}
+
+.pandan--lighter {
+  background-color: $pandan-lighter !important;
+  border-color: $pandan-lighter !important;
+}
+.pandan--lighter--text {
+  color: $pandan-lighter !important;
+  caret-color: $pandan-lighter !important;
+}
+
+.pandan--lightest {
+  background-color: $pandan-lightest !important;
+  border-color: $pandan-lightest !important;
+}
+.pandan--lightest--text {
+  color: $pandan-lightest !important;
+  caret-color: $pandan-lightest !important;
+}
+
+//PAPRIKA
+.paprika--darkest {
+  background-color: $paprika-darkest !important;
+  border-color: $paprika-darkest !important;
+}
+.paprika--darkest--text {
+  color: $paprika-darkest !important;
+  caret-color: $paprika-darkest !important;
+}
+
+.paprika--darker {
+  background-color: $paprika-darker !important;
+  border-color: $paprika-darker !important;
+}
+.paprika--darker--text {
+  color: $paprika-darker !important;
+  caret-color: $paprika-darker !important;
+}
+
+.paprika--dark {
+  background-color: $paprika-dark !important;
+  border-color: $paprika-dark !important;
+}
+.paprika--dark--text {
+  color: $paprika-dark !important;
+  caret-color: $paprika-dark !important;
+}
+
+.paprika {
+  background-color: $paprika !important;
+  border-color: $paprika !important;
+}
+.paprika--text {
+  color: $paprika !important;
+  caret-color: $paprika !important;
+}
+
+.paprika--light {
+  background-color: $paprika-light !important;
+  border-color: $paprika-light !important;
+}
+.paprika--light--text {
+  color: $paprika-light !important;
+  caret-color: $paprika-light !important;
+}
+
+.paprika--lighter {
+  background-color: $paprika-lighter !important;
+  border-color: $paprika-lighter !important;
+}
+.paprika--lighter--text {
+  color: $paprika-lighter !important;
+  caret-color: $paprika-lighter !important;
+}
+
+.paprika--lightest {
+  background-color: $paprika-lightest !important;
+  border-color: $paprika-lightest !important;
+}
+.paprika--lightest--text {
+  color: $paprika-lightest !important;
+  caret-color: $paprika-lightest !important;
+}
+
+//TURMERIC
+.turmeric--darkest {
+  background-color: $turmeric-darkest !important;
+  border-color: $turmeric-darkest !important;
+}
+.turmeric--darkest--text {
+  color: $turmeric-darkest !important;
+  caret-color: $turmeric-darkest !important;
+}
+
+.turmeric--darker {
+  background-color: $turmeric-darker !important;
+  border-color: $turmeric-darker !important;
+}
+.turmeric--darker--text {
+  color: $turmeric-darker !important;
+  caret-color: $turmeric-darker !important;
+}
+
+.turmeric--dark {
+  background-color: $turmeric-dark !important;
+  border-color: $turmeric-dark !important;
+}
+.turmeric--dark--text {
+  color: $turmeric-dark !important;
+  caret-color: $turmeric-dark !important;
+}
+
+.turmeric {
+  background-color: $turmeric !important;
+  border-color: $turmeric !important;
+}
+.turmeric--text {
+  color: $turmeric !important;
+  caret-color: $turmeric !important;
+}
+
+.turmeric--light {
+  background-color: $turmeric-light !important;
+  border-color: $turmeric-light !important;
+}
+.turmeric--light--text {
+  color: $turmeric-light !important;
+  caret-color: $turmeric-light !important;
+}
+
+.turmeric--lighter {
+  background-color: $turmeric-lighter !important;
+  border-color: $turmeric-lighter !important;
+}
+.turmeric--lighter--text {
+  color: $turmeric-lighter !important;
+  caret-color: $turmeric-lighter !important;
+}
+
+.turmeric--lightest {
+  background-color: $turmeric-lightest !important;
+  border-color: $turmeric-lightest !important;
+}
+.turmeric--lightest--text {
+  color: $turmeric-lightest !important;
+  caret-color: $turmeric-lightest !important;
+}
+
+//PEPPER
+.pepper--darkest {
+  background-color: $pepper-darkest !important;
+  border-color: $pepper-darkest !important;
+}
+.pepper--darkest--text {
+  color: $pepper-darkest !important;
+  caret-color: $pepper-darkest !important;
+}
+
+.pepper--darker {
+  background-color: $pepper-darker !important;
+  border-color: $pepper-darker !important;
+}
+.pepper--darker--text {
+  color: $pepper-darker !important;
+  caret-color: $pepper-darker !important;
+}
+
+.pepper--dark {
+  background-color: $pepper-dark !important;
+  border-color: $pepper-dark !important;
+}
+.pepper--dark--text {
+  color: $pepper-dark !important;
+  caret-color: $pepper-dark !important;
+}
+
+.pepper {
+  background-color: $pepper !important;
+  border-color: $pepper !important;
+}
+.pepper--text {
+  color: $pepper !important;
+  caret-color: $pepper !important;
+}
+
+.pepper--light {
+  background-color: $pepper-light !important;
+  border-color: $pepper-light !important;
+}
+.pepper--light--text {
+  color: $pepper-light !important;
+  caret-color: $pepper-light !important;
+}
+
+.pepper--lighter {
+  background-color: $pepper-lighter !important;
+  border-color: $pepper-lighter !important;
+}
+.pepper--lighter--text {
+  color: $pepper-lighter !important;
+  caret-color: $pepper-lighter !important;
+}
+
+.pepper--lightest {
+  background-color: $pepper-lightest !important;
+  border-color: $pepper-lightest !important;
+}
+.pepper--lightest--text {
+  color: $pepper-lightest !important;
+  caret-color: $pepper-lightest !important;
+}
+
+//SHALLOT
+.shallot--darkest {
+  background-color: $shallot-darkest !important;
+  border-color: $shallot-darkest !important;
+}
+.shallot--darkest--text {
+  color: $shallot-darkest !important;
+  caret-color: $shallot-darkest !important;
+}
+
+.shallot--darker {
+  background-color: $shallot-darker !important;
+  border-color: $shallot-darker !important;
+}
+.shallot--darker--text {
+  color: $shallot-darker !important;
+  caret-color: $shallot-darker !important;
+}
+
+.shallot--dark {
+  background-color: $shallot-dark !important;
+  border-color: $shallot-dark !important;
+}
+.shallot--dark--text {
+  color: $shallot-dark !important;
+  caret-color: $shallot-dark !important;
+}
+
+.shallot {
+  background-color: $shallot !important;
+  border-color: $shallot !important;
+}
+.shallot--text {
+  color: $shallot !important;
+  caret-color: $shallot !important;
+}
+
+.shallot--light {
+  background-color: $shallot-light !important;
+  border-color: $shallot-light !important;
+}
+.shallot--light--text {
+  color: $shallot-light !important;
+  caret-color: $shallot-light !important;
+}
+
+.shallot--lighter {
+  background-color: $shallot-lighter !important;
+  border-color: $shallot-lighter !important;
+}
+.shallot--lighter--text {
+  color: $shallot-lighter !important;
+  caret-color: $shallot-lighter !important;
+}
+
+.shallot--lightest {
+  background-color: $shallot-lightest !important;
+  border-color: $shallot-lightest !important;
+}
+.shallot--lightest--text {
+  color: $shallot-lightest !important;
+  caret-color: $shallot-lightest !important;
+}
