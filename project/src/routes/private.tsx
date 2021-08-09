@@ -1,8 +1,12 @@
 import { Redirect, Route, RouteProps } from 'react-router-dom'
-import { URL } from '../constants'
+import { URL } from 'config/constants'
+import { useEffect } from 'react'
 
 const PrivateRoute = ({ children, ...rest }: RouteProps) => {
   const isAuthenticated = true
+  useEffect(() => {
+    console.log('privater route effect')
+  }, [])
   return (
     <Route
       {...rest}

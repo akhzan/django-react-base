@@ -1,7 +1,13 @@
+import { URL } from 'config/constants'
+import { useHistory } from 'react-router-dom'
 import { Button, Form, Grid, Input, Segment } from 'semantic-ui-react'
 import 'styles/login.scss'
 
 const Login = () => {
+  const history = useHistory()
+  const login = () => {
+    history.push(URL.HOME)
+  }
   return (
     <Grid className="login">
       <Grid.Column computer={9} only="computer">
@@ -24,7 +30,7 @@ const Login = () => {
               <Form.Field>
                 <Input placeholder="Password" />
               </Form.Field>
-              <Button primary fluid size="large" type="submit">
+              <Button primary fluid size="large" type="submit" onClick={login}>
                 Login
               </Button>
             </Form>

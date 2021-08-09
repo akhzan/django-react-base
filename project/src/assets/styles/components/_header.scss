@@ -1,0 +1,15 @@
+@import '../variables/units';
+
+.app-header {
+  height: 64px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  padding: 0 $paddingBig;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header__logo {
+  height: 32px;
+  width: auto;
+}
