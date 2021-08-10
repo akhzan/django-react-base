@@ -1,3 +1,22 @@
+@import 'variables/var';
+
 .app-header {
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn,
+.btn-circular {
+  &.primary {
+    background-color: $taro !important;
+    &:hover {
+      background-color: $taro-darker !important;
+    }
+  }
+  &.secondary {
+    background-color: $pepper-lighter !important;
+    color: $taro !important;
+    &:hover {
+      background-color: $pepper-light !important;
+    }
+  }
 }

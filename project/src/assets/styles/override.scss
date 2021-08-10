@@ -1,0 +1,21 @@
+.ui.input > input,
+.ui.input.focus > input,
+.ui.input > input:focus {
+  background: #f4f4f4;
+  border: 0;
+  border-radius: 8px;
+}
+
+.ui.table {
+  border-radius: 16px;
+}
+
+.ui.table thead th,
+.ui.table tfoot th {
+  background: transparent;
+}
+
+.ui.table tr td,
+.ui.table tfoot th {
+  border-top: 0;
+}

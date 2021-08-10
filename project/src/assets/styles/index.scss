@@ -1,3 +1,5 @@
+@import './variables/var';
+
 :root {
   --color-primary: 95, 51, 186;
   --color-secondary: 253, 224, 71;
@@ -13,6 +15,7 @@
   }
   body {
     font-size: 14px;
+    color: $taro-darkest;
   }
   img,
   svg,
@@ -26,8 +29,6 @@
   }
   label {
     display: inline-block;
-    // font-size: 11px;
-    // margin-bottom: 0.5em;
     color: rgba(0, 0, 0, 0.5);
   }
   a {
@@ -43,6 +44,12 @@
 
 @layer components {
   .btn {
-    @apply py-3 px-8 text-base text-white font-bold rounded-full bg-gray-500 hover:bg-gray-400;
+    @apply py-2 px-12 text-base text-white font-bold rounded-full bg-gray-500 hover:bg-gray-400 #{!important};
+  }
+  .btn-circular {
+    @apply m-0 h-12 w-12 text-base text-white font-bold rounded-full text-center flex justify-center items-center bg-gray-500 hover:bg-gray-400 #{!important};
+    .icon {
+      @apply h-auto #{!important};
+    }
   }
 }
