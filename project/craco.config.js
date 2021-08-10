@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const BundleTracker = require('webpack-bundle-tracker')
+const tailwindcss = require('tailwindcss')
+const autoprefixer = require('autoprefixer')
 const { whenDev } = require('@craco/craco')
 
 module.exports = {
@@ -24,6 +26,11 @@ module.exports = {
           [new BundleTracker({ filename: './build/webpack-stats.json' })]
         ),
       ],
+    },
+  },
+  style: {
+    postcss: {
+      plugins: [tailwindcss, autoprefixer],
     },
   },
 }

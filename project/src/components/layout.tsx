@@ -8,10 +8,10 @@ interface Props extends PropsWithChildren<any> {
 const Layout = ({ children, hide = false }: Props) => {
   if (hide) return children
   return (
-    <div>
+    <>
       <Header />
       {children}
-    </div>
+    </>
   )
 }
 
