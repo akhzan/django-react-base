@@ -5,6 +5,7 @@ import Login from 'login'
 import InjectionList from 'injection/list'
 import PrivateRoute from './private'
 import Layout from 'components/layout'
+import Loader from 'components/loader'
 
 const Routes = () => {
   const [loading, setLoading] = useState(true)
@@ -16,7 +17,7 @@ const Routes = () => {
     }
     setTimeout(() => {
       setLoading(false)
-    }, 1000)
+    }, 1500)
   }, [])
   const router = (
     <Router>
@@ -37,7 +38,12 @@ const Routes = () => {
       )}
     </Router>
   )
-  return loading ? <div>Loading...</div> : router
+  const loader = (
+    <div className="w-screen h-screen flex justify-center items-center">
+      <Loader />
+    </div>
+  )
+  return loading ? loader : router
 }
 
 export default Routes
