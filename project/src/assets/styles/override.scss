@@ -19,3 +19,11 @@
 .ui.table tfoot th {
   border-top: 0;
 }
+
+i.icon {
+  height: auto;
+}
+
+.popup-no-arrow.ui.popup:before {
+  content: none;
+}
