@@ -1,4 +1,5 @@
 import { Button, Form, Radio } from 'semantic-ui-react'
+import { Button as AntdButton } from 'antd'
 
 const NewInjection = () => {
   return (
@@ -57,6 +58,9 @@ const NewInjection = () => {
             <Button className="btn primary" type="submit">
               Next
             </Button>
+          </div>
+          <div>
+            <AntdButton className="btn">Test</AntdButton>
           </div>
         </Form>
       </div>

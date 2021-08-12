@@ -1,7 +1,8 @@
 import { URL } from 'config/constants'
 import { useHistory } from 'react-router-dom'
-import { Button, Card, Input } from 'semantic-ui-react'
+import { Button, Card, Input } from 'antd'
 import { Graphic, Logo, PatternOvo } from 'assets/images'
+import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons'
 
 const Login = () => {
   const history = useHistory()
@@ -18,13 +19,17 @@ const Login = () => {
         <div className="w-8/12 max-w-md flex flex-col justify-center">
           <img className="w-auto h-8 mb-12" src={Logo} alt="" />
           <div className="w-full">
-            <Card fluid>
+            <Card>
               <div className="p-6 text-center">
                 <p className="mb-2 font-semibold text-xl">Welcome back,</p>
                 <p className="mb-8">Please login to your account</p>
-                <Input className="mb-4" fluid placeholder="Username" />
-                <Input className="mb-4" icon="eye" fluid placeholder="Password" />
-                <Button fluid className="btn primary" onClick={login}>
+                <Input className="mb-4" placeholder="Username" />
+                <Input.Password
+                  className="mb-4"
+                  placeholder="Password"
+                  iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                />
+                <Button type="primary" className="btn primary" onClick={login}>
                   Login
                 </Button>
                 <div className="mt-6">

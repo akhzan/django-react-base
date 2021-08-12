@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const BundleTracker = require('webpack-bundle-tracker')
 const tailwindcss = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
 const { whenDev } = require('@craco/craco')
+const CracoLessPlugin = require('craco-less')
 
 module.exports = {
   devServer: (devServerConfig) => {
@@ -20,7 +21,7 @@ module.exports = {
     }),
     plugins: {
       add: [
-        ...whenDev(() => [new BundleAnalyzerPlugin()], []),
+        // ...whenDev(() => [new BundleAnalyzerPlugin()], []),
         ...whenDev(
           () => [new BundleTracker({ filename: './dist/webpack-stats.json' })],
           [new BundleTracker({ filename: './build/webpack-stats.json' })]
@@ -33,4 +34,17 @@ module.exports = {
       plugins: [tailwindcss, autoprefixer],
     },
   },
+  plugins: [
+    {
+      plugin: CracoLessPlugin,
+      options: {
+        lessLoaderOptions: {
+          lessOptions: {
+            modifyVars: { '@primary-color': '#5f33ba', '@border-radius-base': '8px', 'input-height-base': '48px' },
+            javascriptEnabled: true,
+          },
+        },
+      },
+    },
+  ],
 }

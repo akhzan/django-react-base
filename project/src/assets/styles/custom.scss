@@ -6,12 +6,12 @@
 
 .btn,
 .btn-circular {
-  &.primary {
-    background-color: $taro !important;
-    &:hover {
-      background-color: $taro-darker !important;
-    }
-  }
+  // &.primary {
+  //   background-color: $taro !important;
+  //   &:hover {
+  //     background-color: $taro-darker !important;
+  //   }
+  // }
   &.secondary {
     background-color: $pepper-lighter !important;
     color: $taro !important;
