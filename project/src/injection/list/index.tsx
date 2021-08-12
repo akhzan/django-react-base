@@ -1,4 +1,3 @@
-import { Completed } from 'assets/images'
 import { URL } from 'config/constants'
 import { useHistory } from 'react-router-dom'
 import { Button, Input, Pagination, Table } from 'antd'
