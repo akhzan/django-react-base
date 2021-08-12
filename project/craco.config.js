@@ -40,7 +40,13 @@ module.exports = {
       options: {
         lessLoaderOptions: {
           lessOptions: {
-            modifyVars: { '@primary-color': '#5f33ba', '@border-radius-base': '8px', 'input-height-base': '48px' },
+            modifyVars: {
+              '@primary-color': '#5f33ba',
+              '@border-radius-base': '8px',
+              'input-height-base': '48px',
+              'table-border-color': '#fff',
+              'table-header-bg': '#fff',
+            },
             javascriptEnabled: true,
           },
         },

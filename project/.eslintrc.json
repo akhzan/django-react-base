@@ -35,6 +35,7 @@
       "error",
       { "blankLine": "always", "prev": "multiline-block-like", "next": "multiline-block-like" }
     ],
+    "react/display-name": "off",
     "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
