@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { URL } from 'config/constants'
 import Login from 'login'
 import InjectionList from 'injection/list'
+import NewInjection from 'injection/new'
 import PrivateRoute from './private'
 import Layout from 'components/layout'
 import Loader from 'components/loader'
@@ -29,6 +30,9 @@ const Routes = () => {
             </PrivateRoute>
             <PrivateRoute exact path={URL.INJECTION_DETAIL}>
               <InjectionList />
+            </PrivateRoute>
+            <PrivateRoute exact path={URL.NEW_INJECTION}>
+              <NewInjection />
             </PrivateRoute>
             <Route exact path={URL.LOGIN}>
               <Login />

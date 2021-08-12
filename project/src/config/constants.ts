@@ -1,6 +1,6 @@
 export const URL = {
   HOME: '/',
   LOGIN: '/login',
-  NEW_INJECTION: '/new/injection',
-  INJECTION_DETAIL: '/injection/:id',
+  NEW_INJECTION: '/injection/new',
+  INJECTION_DETAIL: '/injection/detail/:id',
 }

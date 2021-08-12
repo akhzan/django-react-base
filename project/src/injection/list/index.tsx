@@ -1,8 +1,14 @@
 import { Completed } from 'assets/images'
+import { URL } from 'config/constants'
+import { useHistory } from 'react-router-dom'
 import { Button, Icon, Input, Label, List, Popup, Table } from 'semantic-ui-react'
 
 const InjectionList = () => {
   const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+  const history = useHistory()
+  const gotoNewInjection = () => {
+    history.push(URL.NEW_INJECTION)
+  }
   const popupContent = (
     <div>
       <List divided>
@@ -55,7 +61,9 @@ const InjectionList = () => {
     <div className="py-8 px-28">
       <p className="mb-8 font-bold text-lg text-center">List of Point Injection File</p>
       <div className="flex justify-between mb-4">
-        <Button className="btn primary">Create Point Injection</Button>
+        <Button className="btn primary" onClick={gotoNewInjection}>
+          Create Point Injection
+        </Button>
         <Input style={{ minWidth: 328 }} placeholder="Search" icon="search" iconPosition="left" />
       </div>
       <Table padded>

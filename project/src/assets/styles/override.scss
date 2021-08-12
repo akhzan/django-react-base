@@ -1,3 +1,5 @@
+@import 'variables/var';
+
 .ui.input > input,
 .ui.input.focus > input,
 .ui.input > input:focus {
@@ -26,4 +28,14 @@ i.icon {
 
 .popup-no-arrow.ui.popup:before {
   content: none;
+}
+
+.ui.form .field > label {
+  font-size: 12px;
+  color: $pepper;
+  font-weight: normal;
+}
+
+.ui.button {
+  margin: 0;
 }
