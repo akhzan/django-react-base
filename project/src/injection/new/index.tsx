@@ -1,69 +1,71 @@
-import { Button, Form, Radio } from 'semantic-ui-react'
-import { Button as AntdButton } from 'antd'
+import { Button, Checkbox, Form, Modal, Space } from 'antd'
+import { useState } from 'react'
+import UploadNewInjection from './upload'
+import NewInjectionSummary from './summary'
+
+const options = [
+  { label: 'Merchants have been registered in Pillar', value: '1' },
+  { label: `Merchant's point balance is sufficient`, value: '2' },
+  { label: `Merchant's point limit is correct`, value: '3' },
+  { label: 'Points limit per OVO ID is correct', value: '4' },
+  { label: 'Campaign is active on Pillar', value: '5' },
+]
 
 const NewInjection = () => {
+  const [step, setStep] = useState('upload')
+  const [isShowChecklist, setIsShowChecklist] = useState(false)
+  const isSummary = step === 'summary'
+  const title = isSummary ? 'Summary Point Injection' : 'Upload Point Injection File'
+  const width = isSummary ? 'w-3/4' : 'w-1/2'
   return (
     <div className="px-28 py-8 flex justify-center">
-      <div className="w-1/2">
-        <p className="mb-8 font-bold text-lg">Upload Point Injection File</p>
-        <Form>
-          <Form.Field>
-            <label>Project Name</label>
-            <input placeholder="Input Project Name" />
-          </Form.Field>
-          <Form.Field>
-            <label>Disbursement Date</label>
-          </Form.Field>
-          <div className="flex items-center">
-            <Form.Field className="w-1/2">
-              <Radio label="Immediate" />
-            </Form.Field>
-            <Form.Field className="w-1/2">
-              <Radio label="Custom date" />
-            </Form.Field>
-          </div>
-          <Form.Field>
-            <label>Injection Type</label>
-          </Form.Field>
-          <div className="flex items-center">
-            <Form.Field className="w-1/2">
-              <Radio label="Fixed point amount" />
-            </Form.Field>
-            <Form.Field className="w-1/2">
-              <Radio label="Based on transaction" />
-            </Form.Field>
-          </div>
-          <Form.Field>
-            <label>Reporting Result Email</label>
-            <input placeholder="Input Email" />
-            <label className="mt-2">Separated by comma (,)</label>
-          </Form.Field>
-          <Form.Field>
-            <label>Upload File</label>
-            <Button fluid className="btn">
-              Upload
-            </Button>
-          </Form.Field>
-          <div className="grid gap-2 mt-2">
-            <div>
-              <Radio checked disabled />
-              <a href="/" style={{ paddingLeft: 13 }}>
-                Download example file here
-              </a>
-            </div>
-            <Radio checked disabled label="File must have no duplicate in merchant invoice" />
-            <Radio checked disabled label="Max file size 20 MB" />
-          </div>
-          <div className="mt-8 mb-6 flex justify-center">
-            <Button className="btn primary" type="submit">
-              Next
-            </Button>
-          </div>
-          <div>
-            <AntdButton className="btn">Test</AntdButton>
+      <div className={width}>
+        <p className="mb-8 font-bold text-lg">{title}</p>
+        <Form name="basic" labelCol={{ span: 24 }} wrapperCol={{ span: 24 }} onFinish={() => {}}>
+          {step === 'summary' ? <NewInjectionSummary /> : <UploadNewInjection />}
+          <div className="flex justify-center my-8">
+            <Form.Item>
+              <Space>
+                {isSummary && (
+                  <Button className="btn secondary mr-2" onClick={() => setStep('upload')}>
+                    Back
+                  </Button>
+                )}
+                <Button
+                  className="btn"
+                  type="primary"
+                  htmlType="submit"
+                  onClick={() => (isSummary ? setIsShowChecklist(true) : setStep('summary'))}
+                >
+                  {isSummary ? 'Submit for Approval' : 'Next'}
+                </Button>
+              </Space>
+            </Form.Item>
           </div>
         </Form>
       </div>
+      <Modal
+        centered
+        width={400}
+        closable={false}
+        visible={isShowChecklist}
+        footer={null}
+        onCancel={() => setIsShowChecklist(false)}
+      >
+        <div className="p-2">
+          <p className="text-lg text-center font-bold mb-8">Request Checklist</p>
+          <p className="mb-4">I have (really carefully) checked that:</p>
+          <Checkbox.Group options={options} />
+          <Space className="flex justify-center items-center pt-8">
+            <Button type="text" className="btn">
+              Cancel
+            </Button>
+            <Button type="primary" className="btn">
+              Submit
+            </Button>
+          </Space>
+        </div>
+      </Modal>
     </div>
   )
 }

@@ -36,3 +36,40 @@
     }
   }
 }
+
+.ant-form-item {
+  margin-bottom: 1rem;
+}
+
+.ant-input,
+.ant-input-affix-wrapper {
+  background-color: $pepper-lighter !important;
+  border-color: #fff;
+}
+
+.ant-form-item-label {
+  padding: 0 0 2px 0 !important;
+  & > label {
+    height: auto;
+    font-size: 0.75rem;
+    color: $pepper;
+  }
+}
+
+.ant-form label {
+  font-size: 0.75rem;
+}
+
+.ant-checkbox-group-item {
+  margin-bottom: 1rem;
+}
+
+.ant-checkbox-inner {
+  border-radius: 2px;
+}
+
+.ant-form-item-explain,
+.ant-form-item-extra {
+  margin-top: 4px;
+  font-size: 0.75rem;
+}

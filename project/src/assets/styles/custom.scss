@@ -13,10 +13,12 @@
   //   }
   // }
   &.secondary {
-    background-color: $pepper-lighter !important;
+    background-color: $taro-secondary !important;
+    border: 0;
+    outline: none;
     color: $taro !important;
     &:hover {
-      background-color: $pepper-light !important;
+      background-color: $taro-lightest !important;
     }
   }
 }
