@@ -20,5 +20,6 @@ urlpatterns = [
     path('', views.landing),
     path('login', views.landing),
     path('injection/new', views.landing),
+    path('injection/success', views.landing),
     path('injection/detail/<slug:slug>', views.landing),
 ]

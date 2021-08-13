@@ -3,13 +3,19 @@ import { useState } from 'react'
 import UploadNewInjection from './upload'
 import NewInjectionSummary from './summary'
 import NewInjectionChecklist from './checklist'
+import { useHistory } from 'react-router-dom'
+import { URL } from 'config/constants'
 
 const NewInjection = () => {
+  const history = useHistory()
   const [step, setStep] = useState('upload')
   const [isShowChecklist, setIsShowChecklist] = useState(false)
   const isSummary = step === 'summary'
   const title = isSummary ? 'Summary Point Injection' : 'Upload Point Injection File'
   const width = isSummary ? 'w-3/4' : 'w-1/2'
+  const submit = () => {
+    history.replace(URL.INJECTION_SUCCESS)
+  }
   return (
     <div className="px-28 py-8 flex justify-center">
       <div className={width}>
@@ -36,7 +42,7 @@ const NewInjection = () => {
           </div>
         </Form>
       </div>
-      <NewInjectionChecklist cancel={() => setIsShowChecklist(false)} visible={isShowChecklist} />
+      <NewInjectionChecklist cancel={() => setIsShowChecklist(false)} submit={submit} visible={isShowChecklist} />
     </div>
   )
 }

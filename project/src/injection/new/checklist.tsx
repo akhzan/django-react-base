@@ -3,6 +3,7 @@ import { Modal, Checkbox, Space, Button } from 'antd'
 interface Props {
   cancel: () => void
   visible: boolean
+  submit?: () => void
 }
 
 const options = [
@@ -13,7 +14,7 @@ const options = [
   { label: 'Campaign is active on Pillar', value: '5' },
 ]
 
-const NewInjectionChecklist = ({ cancel, visible }: Props) => {
+const NewInjectionChecklist = ({ cancel, submit = () => {}, visible }: Props) => {
   return (
     <Modal centered width={400} closable={false} visible={visible} footer={null} onCancel={cancel}>
       <div className="p-2">
@@ -21,10 +22,12 @@ const NewInjectionChecklist = ({ cancel, visible }: Props) => {
         <p className="mb-4">I have (really carefully) checked that:</p>
         <Checkbox.Group options={options} />
         <Space className="flex justify-center items-center pt-8">
-          <Button type="text" className="btn">
+          <Button type="text" className="btn" onClick={cancel}>
             Cancel
           </Button>
-          <Button className="btn primary">Submit</Button>
+          <Button className="btn primary" onClick={submit}>
+            Submit
+          </Button>
         </Space>
       </div>
     </Modal>

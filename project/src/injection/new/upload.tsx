@@ -39,8 +39,10 @@ const UploadNewInjection = () => {
         name="projectName"
         rules={[{ required: true, message: 'Please input your reporting result email.' }]}
       >
-        <Input placeholder="Input Email" />
-        <p className="text-gray-400 text-xs pt-2">Separated by comma (,)</p>
+        <div>
+          <Input placeholder="Input Email" />
+          <p className="text-gray-400 text-xs pt-2">Separated by comma (,)</p>
+        </div>
       </Form.Item>
 
       <Form.Item label="Upload File" name="projectName" rules={[{ required: true, message: 'Please upload files.' }]}>

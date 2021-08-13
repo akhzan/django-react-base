@@ -7,6 +7,8 @@ import NewInjection from 'injection/new'
 import PrivateRoute from './private'
 import Layout from 'components/layout'
 import Loader from 'components/loader'
+import InjectionSuccess from 'injection/success'
+import InjectionDetail from 'injection/detail'
 
 const Routes = () => {
   const [loading, setLoading] = useState(true)
@@ -29,10 +31,13 @@ const Routes = () => {
               <InjectionList />
             </PrivateRoute>
             <PrivateRoute exact path={URL.INJECTION_DETAIL}>
-              <InjectionList />
+              <InjectionDetail />
             </PrivateRoute>
             <PrivateRoute exact path={URL.NEW_INJECTION}>
               <NewInjection />
+            </PrivateRoute>
+            <PrivateRoute exact path={URL.INJECTION_SUCCESS}>
+              <InjectionSuccess />
             </PrivateRoute>
             <Route exact path={URL.LOGIN}>
               <Login />
