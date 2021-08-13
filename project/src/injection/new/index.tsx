@@ -1,15 +1,8 @@
-import { Button, Checkbox, Form, Modal, Space } from 'antd'
+import { Button, Form, Space } from 'antd'
 import { useState } from 'react'
 import UploadNewInjection from './upload'
 import NewInjectionSummary from './summary'
-
-const options = [
-  { label: 'Merchants have been registered in Pillar', value: '1' },
-  { label: `Merchant's point balance is sufficient`, value: '2' },
-  { label: `Merchant's point limit is correct`, value: '3' },
-  { label: 'Points limit per OVO ID is correct', value: '4' },
-  { label: 'Campaign is active on Pillar', value: '5' },
-]
+import NewInjectionChecklist from './checklist'
 
 const NewInjection = () => {
   const [step, setStep] = useState('upload')
@@ -32,8 +25,7 @@ const NewInjection = () => {
                   </Button>
                 )}
                 <Button
-                  className="btn"
-                  type="primary"
+                  className="btn primary"
                   htmlType="submit"
                   onClick={() => (isSummary ? setIsShowChecklist(true) : setStep('summary'))}
                 >
@@ -44,28 +36,7 @@ const NewInjection = () => {
           </div>
         </Form>
       </div>
-      <Modal
-        centered
-        width={400}
-        closable={false}
-        visible={isShowChecklist}
-        footer={null}
-        onCancel={() => setIsShowChecklist(false)}
-      >
-        <div className="p-2">
-          <p className="text-lg text-center font-bold mb-8">Request Checklist</p>
-          <p className="mb-4">I have (really carefully) checked that:</p>
-          <Checkbox.Group options={options} />
-          <Space className="flex justify-center items-center pt-8">
-            <Button type="text" className="btn">
-              Cancel
-            </Button>
-            <Button type="primary" className="btn">
-              Submit
-            </Button>
-          </Space>
-        </div>
-      </Modal>
+      <NewInjectionChecklist cancel={() => setIsShowChecklist(false)} visible={isShowChecklist} />
     </div>
   )
 }

@@ -6,19 +6,21 @@
 
 .btn,
 .btn-circular {
-  // &.primary {
-  //   background-color: $taro !important;
-  //   &:hover {
-  //     background-color: $taro-darker !important;
-  //   }
-  // }
+  &.primary {
+    background-color: $taro !important;
+    color: #fff !important;
+    border: 0;
+    &:hover {
+      background-color: rgba($taro-dark, 0.8) !important;
+    }
+  }
   &.secondary {
-    background-color: $taro-secondary !important;
+    background-color: $taro-lightest !important;
     border: 0;
     outline: none;
     color: $taro !important;
     &:hover {
-      background-color: $taro-lightest !important;
+      background-color: rgba($taro-lighter, 0.4) !important;
     }
   }
 }

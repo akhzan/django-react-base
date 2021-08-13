@@ -26,7 +26,7 @@ const InjectionList = () => {
       <p className="mb-8 font-bold text-lg text-center">List of Point Injection File</p>
       <div className="flex justify-between mb-4">
         <Input style={{ width: 328 }} prefix={<SearchOutlined />} placeholder="Search" />
-        <Button type="primary" className="btn" onClick={gotoNewInjection}>
+        <Button className="btn primary" onClick={gotoNewInjection}>
           Create Point Injection
         </Button>
       </div>

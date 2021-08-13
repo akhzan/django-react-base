@@ -29,7 +29,7 @@ const Login = () => {
                   placeholder="Password"
                   iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                 />
-                <Button type="primary" className="btn primary" onClick={login}>
+                <Button className="btn primary" onClick={login}>
                   Login
                 </Button>
                 <div className="mt-6">
